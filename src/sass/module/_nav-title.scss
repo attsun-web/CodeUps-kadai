@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.nav-title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-title__main-title {
+    font-family: $second-font-family;
+    font-size: rem(18);
+    font-weight: $normal;
+    line-height: 1;
+    color: $white;
+}
+
+.nav-title__sub-title {
+    font-size: rem(10);
+    font-weight: $normal;
+    line-height: 1.5;
+    color: $white;
+    margin-top: rem(4);
+}
+
+.nav-title a {
+    color: $white;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-title a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: rem(-4);
+    width: 100%;
+    height: rem(1);
+    background-color: $white;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform 0.3s;
+}
+
+.nav-title a:hover::after {
+    transform: scale(1, 1);
+}

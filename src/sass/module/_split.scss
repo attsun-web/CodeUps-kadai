@@ -1,0 +1,60 @@
+@use "global" as *;
+
+// スマホ表示では上下分割、PC表示では左右分割
+.split {
+    // position: absolute;
+    background-image: url("../images/sp/first-view-sp.jpg");
+    background-repeat: no-repeat;
+    transform: none;
+    width: 100%;
+    height: 50%;
+    background-size: 100% 200%; /* 縦方向に2倍の高さ */
+    @include mq(md) {
+        background-image: url("../images/common/first-view.jpg");
+
+        height: 100%;
+        width: 50%;
+        background-size: 200% 100%; /* 横方向に2倍の幅 */
+    }
+}
+
+.split-image-a {
+    top: 0;
+    background-position: center top; /* 上半分 */
+
+    transform: translateY(-100%);
+    animation: slideDown 1s ease-out forwards;
+    @include mq(md) {
+        top: 0;
+        left: 0;
+        background-position: left center; /* 左半分 */
+
+        transform: translateY(100%);
+        animation: slideUp 1s ease-out forwards;
+    }
+}
+.split-image-b {
+    bottom: 0;
+    background-position: center bottom; /* 下半分 */
+
+    transform: translateY(100%);
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+    @include mq(md) {
+        top: 0;
+        right: 0;
+        background-position: right center; /* 右半分 */
+
+        transform: translateY(100%);
+        animation: slideUp 1s ease-out forwards;
+        animation-delay: 0.5s;
+   }
+}
+
+/* アニメーション */
+@keyframes slideDown {
+  to { transform: translateY(0); }
+}
+@keyframes slideUp {
+  to { transform: translateY(0); }
+}

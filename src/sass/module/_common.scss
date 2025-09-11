@@ -1,0 +1,25 @@
+
+@use "global" as *;
+
+.hidden {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh; /* 念のため固定 */
+}
+
+.md-only {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.sp-only {
+  display: block;
+  @include mq(md) {
+    display: none;
+  }
+}

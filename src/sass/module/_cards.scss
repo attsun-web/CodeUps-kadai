@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.cards {
+    padding-left: rem(15);
+
+    @include mq(md) {
+        position: relative;
+        padding-left: rem(180);
+    }
+}
+
+.cards__btn {
+    display: none;
+
+    @include mq(md) {
+        display: flex;
+        gap: rem(80);
+    }
+}
+
+.cards__prev, .cards__next {
+    width: rem(80);
+    cursor: pointer;
+}
+
+.cards__container {
+    overflow-x: hidden;
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+    width: 100%;
+    margin-top: rem(22);
+}
+.cards__list {
+    display: flex;
+    overflow: visible;
+    gap: rem(24);
+    @include mq(md) {
+        gap: clamp(rem(16), 2%, rem(40));
+    }
+    transition: transform 0.3s ease;
+}
+
+.cards__item + .cards__item {
+    margin-left: rem(24);
+}
+
+.cards__item {
+    flex: 0 0 calc((100% - rem(24)) / 1.2); /* 1枚＋2枚目の20% */
+    @include mq(md) {
+        flex: 0 0 calc((100% - rem(40) * 2) / 3.42); /* 3枚＋4枚目の42% */
+
+    }
+}

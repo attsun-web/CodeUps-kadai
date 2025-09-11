@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.information {
+  width: 100%;
+  background-color: $green2;
+}
+
+.information__inner {
+  padding: rem(80) 0;
+  @include mq(md) {
+    padding: rem(100) 0;
+  }
+}
+.information__contents {
+  padding-top: rem(24);
+  @include mq(md) {
+    padding-top: rem(40);
+    display: flex;
+  }
+}
+
+.information__image-block {
+  position: relative; /* 絶対配置の基準にする */
+  width: 100%; /* 横幅を親要素の幅に合わせる */
+  padding-top: calc(227 / 345 * 100%);
+  @include mq(md) {
+    width: 50%;
+    aspect-ratio: 540 / 356;
+    padding-top: 0;
+  }
+}
+
+.information__image-block img {
+  position: absolute; /* 親要素内で絶対配置 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover; /* 画像がトリミングされても比率を保ち、はみ出た部分は切り取る */
+}
+.information__container {
+  @include mq(md) {
+    width: 50%;
+    padding-left: rem(48);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.information__text-block {
+  padding-top: rem(24);
+  @include mq(md) {
+    padding-top: 0;
+  }
+}
+.information__title{
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: 1.2;
+  color: $green;
+  padding-bottom: rem(4);
+  border-bottom: rem(1) solid $green-accent;
+}
+
+.information__text {
+  margin-top: rem(8);
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.5;
+  color: $green;
+}
+.information__btn {
+    margin-top: rem(40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

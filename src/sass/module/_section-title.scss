@@ -1,0 +1,72 @@
+@use "global" as *;
+
+.section-title {
+    padding: 0 rem(42);
+    text-align: center;
+}
+.section-title--large {
+    padding: 0;
+    text-align: center;
+}
+
+.section-title__main-title {
+    font-family: $second-font-family;
+    font-size: rem(32);
+    font-weight: $normal;
+    line-height: 1.25;
+    color: $green;
+    @include mq(md) {
+        font-size: rem(40);
+        line-height: 1;
+    }
+}
+
+.section-title__main-title--large {
+    font-size: rem(80);
+    @include mq(md) {
+        font-size: rem(80);
+    }
+}
+
+.section-title__main-title::first-letter {
+    color: $green-accent;
+}
+
+.section-title__sub-title {
+    font-size: rem(12);
+    font-weight: $normal;
+    line-height: 1.5;
+    color: $green-accent;
+    padding: rem(4) 0;
+    @include mq(md) {
+        padding: rem(8) 0 0;
+
+    }
+}
+
+.section-title__main-title--light {
+    @include mq(md) {
+        color: $white;
+    }
+}
+
+.section-title__main-title--light::first-letter {
+    @include mq(md) {
+        color: $green2;
+    }
+}
+
+.section-title__sub-title--light {
+    @include mq(md) {
+        color: $white;
+    }
+}
+
+.section-title__text {
+    font-size: rem(14);
+    font-weight: $normal;
+    line-height: 1.28571;
+    color: $green-accent;
+    padding-top: rem(4);
+
+}

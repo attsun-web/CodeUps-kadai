@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.slider {
+  position: relative;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+/* スライド画像 */
+.slider__images {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.slider__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.slider__message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.slider__message-title {
+    font-size: rem(40);
+    font-family: $third-font-family;
+    font-weight: 400;
+    line-height: 1.25;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 0.216em;
+    @include mq(md) {
+        font-size: rem(80);
+        line-height: 1.2;
+        letter-spacing: 0.432em;
+    }
+}
+
+.slider__message-text {
+    font-size: rem(20);
+    font-family: $second-font-family;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    color: $white;
+    @include mq(md) {
+        font-size: rem(40);
+    }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

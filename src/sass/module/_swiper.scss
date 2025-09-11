@@ -1,0 +1,61 @@
+@use "global" as *;
+
+.swiper {
+  overflow: visible;
+  width: 100%;
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+    @include mq(md) {
+        position: absolute;
+        margin: initial;
+        top: 0;
+        display: flex;
+        height: rem(80);
+        width: rem(80);
+        border-radius: 50%;
+    }
+}
+.swiper-button-prev {
+    @include mq(md) {
+        right: rem(340);
+        left: auto;
+    }
+}
+.swiper-button-next {
+    @include mq(md) {
+        right: rem(170);
+        left: auto;
+    }
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: rem(80);
+  margin: auto;
+  width: rem(80);
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev::after {
+  background-image: url(../images/common/campaign_prev.png);
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+  background-image: url(../images/common/campaign_next.png);
+}
+/* 画像サイズ調整 */
+.swiper-slide img {
+  height: auto;
+  width: 100%;
+}
+
+.swiper-slide:first-child {
+  margin-left: 3px; /* 1枚目だけ左余白を追加 */
+}

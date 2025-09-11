@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.sns-list {
+    display: flex;
+    justify-content: flex-start;
+    gap: rem(16);
+}
+.sns-list__item {
+    width: rem(24);
+    height: rem(24);
+}

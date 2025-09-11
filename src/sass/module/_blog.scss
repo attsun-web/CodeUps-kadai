@@ -1,0 +1,58 @@
+@use "global" as *;
+
+.blog {
+    width: 100%;
+    @include mq(md) {
+        position: relative;
+    }
+}
+.blog::before {
+    content: "";
+    @include mq(md) {
+        position: absolute;
+        top: rem(calc(24));
+        right: min(calc(50% + rem(183)), calc(100% - rem(437) - $padding-pc));
+        width: rem(437);
+        height: rem(201);
+        background-image: url("../images/common/bg-img-blog.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.blog__bg {
+    @include mq(md) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(500 / 1080 * 100vw); // インナー幅までは500pxの高さ
+        max-height: 500px;
+        background: url("../images/common/blog_bg.png") no-repeat center;
+        background-size: cover;
+        z-index: -1;
+    }
+}
+.blog__inner {
+    padding-top: rem(80); // 左右の余白はinnerで制御
+
+    @include mq(md) {
+        padding-top: rem(100);
+    }
+}
+.blog__contents {
+    padding-top: rem(24);
+
+    @include mq(md) {
+        padding-top: rem(80);
+    }
+}
+.blog__btn {
+    margin-top: rem(40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}

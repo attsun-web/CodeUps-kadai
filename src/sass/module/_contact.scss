@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.contact {
+    position: relative;
+}
+.contact::before {
+    content: "";
+    position: absolute;
+    top: rem(54);
+    left: calc(50% + rem(63.5));
+    width: rem(109);
+    height: rem(50);
+    background-image: url("../images/common/bg-img-contact_sp.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include mq(md) {
+        top: rem(100);
+        left: min(calc(50% + rem(369)), (100% - rem(301) - $padding-pc));
+        width: rem(301);
+        height: rem(138);
+        background-image: url("../images/common/bg-img-contact.png");
+    }
+}
+
+.contact__inner {
+    padding-top: rem(80);
+    padding-bottom: rem(100);
+    @include mq(md) {
+        padding-top: rem(140);
+        padding-bottom: rem(160);
+    }
+}
+.contact__contents {
+    @include mq(md) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: rem(80) 10.37037037% rem(80) 4.62962963%;
+        box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.25);
+    }
+}
+.contact__border {
+    @include mq(md) {
+        width: 1px;
+        height: rem(255);
+        background-color: $green-accent;
+    }
+}
+.contact__title-btn {
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: 0;
+    }
+}
+.contact__btn {
+    margin-top: rem(40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mq(md) {
+    }
+}

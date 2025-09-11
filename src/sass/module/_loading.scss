@@ -1,0 +1,81 @@
+@use "global" as *;
+
+
+.loading,
+.loading__split {
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.loading {
+  // background-color: $green-accent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading__message {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 3s ease forwards;
+}
+
+.loading__message-title {
+    font-size: rem(40);
+    font-family: $third-font-family;
+    font-weight: 400;
+    line-height: 1.25;
+    color: $green-accent;
+    text-transform: uppercase;
+    letter-spacing: 0.216em;
+    @include mq(md) {
+        font-size: rem(80);
+        line-height: 1.2;
+        letter-spacing: 0.432em;
+    }
+}
+
+.loading__message-text {
+    font-size: rem(20);
+    font-family: $second-font-family;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    color: $green-accent;
+    @include mq(md) {
+        font-size: rem(40);
+    }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loading__split {
+  display: none;
+}
+
+.loading__split.anim-start {
+    display: block;
+    @include mq(md) {
+      display: flex;
+    }
+}
+
+@keyframes slideUp {
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+@keyframes slideDown {
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

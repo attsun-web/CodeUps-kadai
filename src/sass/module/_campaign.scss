@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.campaign {
+    position: relative;
+    width: 100%;
+}
+.campaign__inner {
+    width: inherit;
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(120);
+    }
+}
+
+.campaign__slider {
+    position: relative;
+    overflow: hidden;   /* 左側にはみ出させない */
+    padding: rem(24) 0;  // box-shadowを見せるための余白
+    margin-left: auto;
+    width: 96%;
+
+    @include mq(md) {
+        width: 87.5%;
+        padding: rem(40) 0;  // box-shadowを見せるための余白
+    }
+}
+
+.campaign__slider-next,
+.campaign__slider-prev {
+    @include mq(md) {
+        position: absolute;
+        width: rem(80);
+        height: rem(80);
+        border-radius: 50%;
+        z-index: 1;
+    }
+}
+
+.campaign__btn {
+    margin-top: rem(16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}

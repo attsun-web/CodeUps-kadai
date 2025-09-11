@@ -1,0 +1,96 @@
+@use "global" as *;
+
+.arrow-btn a {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid $green-accent;
+  background-color: $white;
+  @include mq(md) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.arrow-btn a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 1px;
+  height: 28px;
+  transform: translate(-50%, -50%);
+  border-radius: 9999px;
+  background-color: $green-accent;
+  @include mq(md) {
+    width: 1px;
+    height: 40px;
+  }
+}
+
+.arrow-btn a::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 50%;
+  width: 1px;
+  height: 8px;
+  transform: translateX(-50%);
+  border-radius: 9999px;
+  background-color: $green-accent;
+  transform: rotate(45deg);
+  transform-origin: top left;
+  @include mq(md) {
+    top: 20px;
+    width: 1px;
+  }
+}
+
+.arrow-btn a:hover {
+  background-color: $green-accent;
+  border: 1px solid $white;
+}
+.arrow-btn a:hover::before {
+  background-color: $white;
+}
+.arrow-btn a:hover::after {
+  background-color: $white;
+}
+
+.arrow-btn--left a {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #408F95;
+}
+
+.arrow-btn--left a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 1px;
+  transform: translate(-50%, -50%);
+  border-radius: 1px;
+  background-color: #408F95;
+
+}
+
+.arrow-btn--left a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 21px;
+  width: 8px;
+  height: 1px;
+  transform: translateY(-50%);
+  border-radius: 1px;
+  background-color: #408F95;
+  transform: rotate(45deg);
+  transform-origin: top left;
+}

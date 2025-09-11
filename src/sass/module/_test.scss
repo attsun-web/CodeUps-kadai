@@ -1,1 +1,25 @@
 @use "global" as *;
+
+.test {
+    color: #FFF;
+    font-family: Gotu;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+}
+
+.test__images {
+    display: flex;
+}
+
+.test__image--left{
+  left: 0;
+  object-position: right 50%;
+}
+
+.test__image--right {
+  right: 0;
+  object-position: left 50%;
+}

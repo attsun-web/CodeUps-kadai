@@ -1,0 +1,117 @@
+@use "global" as *;
+
+.about {
+    position: relative;
+    width: 100%;
+}
+.about::before {
+    content: "";
+    position: absolute;
+    @include mq(md) {
+        bottom: rem(calc(50));
+        left: min(calc(50% + rem(443)), calc(100% - rem(194) - $padding-pc));
+        width: rem(194);
+        height: rem(181);
+        background-image: url("../images/common/bg-img-about.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 3;
+    }
+}
+
+.about__inner {
+    width: inherit;
+    padding: rem(80) 0 rem(70);
+    @include mq(md) {
+        padding: rem(140) 0;
+    }
+}
+.about__contents {
+    position: relative;
+}
+.about__images {
+    position: relative;
+    margin-top: rem(24);
+    width: 100%;
+    padding-top: calc(212 /345 * 100%);
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}
+
+.about__image1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: calc(128 / 345 * 100%);
+    z-index: 1;
+    @include mq(md) {
+        max-width: rem(400);
+    }
+}
+.about__image2 {
+    position: absolute;
+    top: calc(26 / 212 * 100%);
+    left: calc(64 / 345 * 100%);
+    display: block;
+    width: calc(281 / 345 * 100%);
+    z-index: 0;
+    @include mq(md) {
+        max-width: rem(880);
+    }
+}
+.about__text-area {
+    margin-top: rem(40);
+    z-index: 2;
+    @include mq(md) {
+        position: absolute;
+        top: calc(200 / 661 * 100%);
+        left: calc(201 / 1080 * 100%);
+        width: calc(840 / 1080 * 100%);
+        margin-top: 0;
+        display: flex;
+    }
+}
+
+.about__title {
+    font-size: rem(40);
+    font-style: normal;
+    font-family: $second-font-family;
+    font-weight: normal;
+    line-height: 1;
+    color: $green-accent;
+    @include mq(md) {
+        color: $white;
+        font-size: clamp(rem(74), 6.5vw, rem(80));
+        line-height: 1.25;
+        width: calc(400 / 840 * 100%);
+    }
+}
+.about__text-block {
+    margin-top: rem(16);
+    font-size: rem(16);
+    font-style: normal;
+    font-family: $base-font-family;
+    font-weight: $normal;
+    line-height: 1.5;
+    color: $green;
+    @include mq(md) {
+        color: $white;
+        line-height: 1.5;
+        width: calc(400 / 840 * 100%);
+        margin-left: rem(40);
+        margin-top: 0;
+    }
+}
+.about__btn {
+    margin-top: rem(50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}
+
