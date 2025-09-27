@@ -6,7 +6,7 @@
 }
 
 .blog-card__inner{
-    padding: rem(16);
+    padding: rem(16) rem(16) rem(25) rem(16);
 }
 
 .blog-card__img {
@@ -29,7 +29,10 @@
 }
 
 .blog-card__body{
-    margin-top: rem(24);
+    margin-top: rem(17);
+    @include mq(md) {
+        margin-top: rem(16);
+    }
 }
 
 .blog-card__date{
@@ -46,12 +49,20 @@
     color: $green;
     padding-bottom: rem(4);
     border-bottom: rem(1) solid $green-accent;
+    margin-top: rem(-1);
+    @include mq(md) {
+        padding-bottom: rem(3);
+        margin-top: 0;
+    }
 }
 
 .blog-card__text{
-    margin-top: rem(16);
+    margin-top: rem(15);
     font-size: rem(16);
     line-height: 1.5;
     color: $green;
+    @include mq(md) {
+        margin-top: rem(16);
+    }
 }
 

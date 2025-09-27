@@ -13,7 +13,7 @@
 .md-only {
   display: none;
   @include mq(md) {
-    display: block;
+    display: inline-block;
   }
 }
 

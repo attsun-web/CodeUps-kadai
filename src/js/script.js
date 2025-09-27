@@ -69,7 +69,7 @@ function startSlider() {
 }
 
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1.2, // 1枚と(56px / 280px)
+    slidesPerView: 1.27, // 1枚＋α
     spaceBetween: 24, // スライド間のスペース
     slidesPerGroup: 1,
     loopedSlides: 999, // 余り移動を防ぐ
@@ -88,11 +88,11 @@ var swiper = new Swiper(".mySwiper", {
     breakpoints: {
       // スライドの表示枚数：768px以上の場合
       768: {
-        slidesPerView: 3.41916168, // 3枚と(140px / 334px)
+        slidesPerView: 3.41916168, // 3枚＋α
         spaceBetween: 24, // スライド間のスペース
       },
       1440: {
-        slidesPerView: 3.41916168, // 3枚と(140px / 334px)
+        slidesPerView: 3.49, // 3枚＋α
         spaceBetween: 40, // スライド間のスペース
       }
     }
@@ -105,7 +105,7 @@ var swiper = new Swiper(".mySwiper", {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         // swiper.autoplay.start();
-        //observer.unobserve(target); // 1回だけ実行
+        observer.unobserve(target); // 1回だけ実行
       }
     });
   }, { threshold: 0.3 }); // 30%見えたら開始

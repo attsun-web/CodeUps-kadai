@@ -2,7 +2,7 @@
 
 
 .price-list + .price-list {
-    margin-top: rem(40);
+    margin-top: rem(39);
 }
 
 .price-list__title {
@@ -31,7 +31,12 @@
         line-height: 1.5;
     }
 }
-
+.price-list__price {
+    @include mq(md) {
+        padding-right: rem(1);
+        // padding-bottom: rem(1);
+    }
+}
 // .price-list__item + .price-list__item {
 //     margin-top: rem(8);
 // }

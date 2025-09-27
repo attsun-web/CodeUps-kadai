@@ -8,7 +8,7 @@
     content: "";
     @include mq(md) {
         position: absolute;
-        top: rem(calc(20));
+        top: rem(23);
         right: min(calc(50% + rem(319)), calc(100% - rem(301) - $padding-pc));
         width: rem(301);
         height: rem(138);
@@ -21,7 +21,7 @@
     content: "";
     @include mq(md) {
         position: absolute;
-        bottom: rem(calc(73));
+        bottom: rem(70);
         left: min(calc(50% + rem(469)), calc(100% - rem(71) - $padding-pc));
         width: rem(71);
         height: rem(162);
@@ -31,14 +31,24 @@
     }
 }
 .voice__inner {
-    padding-top: rem(80);         // 左右の余白はinnerで制御
-    padding-bottom: rem(80);      // 左右の余白はinnerで制御
+    padding-top: rem(85);         // 左右の余白はinnerで制御
+    padding-bottom: rem(84);      // 左右の余白はinnerで制御
     @include mq(md) {
-        padding-top: rem(140);      // 左右の余白はinnerで制御
-        padding-bottom: rem(140);   // 左右の余白はinnerで制御
+        padding-top: rem(142);      // 左右の余白はinnerで制御
+        padding-bottom: rem(143);   // 左右の余白はinnerで制御
     }
 }
-
+.voice__section-title {
+    margin-right: rem(1);
+    @include mq(md) {
+        margin-right: rem(2);
+    }
+}
+.voice__section-sub-title {
+    @include mq(md) {
+        margin-top: rem(1);
+    }
+}
 .voice__contents {
     padding-top: rem(40);
     @include mq(md) {
@@ -46,11 +56,13 @@
     }
 }
 .voice__btn {
-    margin-top: rem(40);
+    margin-top: rem(41);
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: rem(3);
     @include mq(md) {
         margin-top: rem(80);
+        margin-right: rem(4);
     }
 }

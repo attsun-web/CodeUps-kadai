@@ -7,6 +7,7 @@
 .section-title--large {
     padding: 0;
     text-align: center;
+    margin-right: rem(1);
 }
 
 .section-title__main-title {
@@ -15,6 +16,7 @@
     font-weight: $normal;
     line-height: 1.25;
     color: $green;
+    margin-left: rem(-1);
     @include mq(md) {
         font-size: rem(40);
         line-height: 1;
@@ -23,8 +25,10 @@
 
 .section-title__main-title--large {
     font-size: rem(80);
+    line-height: 1;
     @include mq(md) {
         font-size: rem(80);
+        line-height: 1;
     }
 }
 
@@ -38,12 +42,20 @@
     line-height: 1.5;
     color: $green-accent;
     padding: rem(4) 0;
+    margin-left: rem(-1);
     @include mq(md) {
         padding: rem(8) 0 0;
 
     }
 }
-
+.section-title__sub-title--large {
+    margin-top: rem(-10);
+    @include mq(md) {
+        padding: 0 0 0;
+        margin-top: rem(-6);
+        margin-left: rem(-1);
+    }
+}
 .section-title__main-title--light {
     @include mq(md) {
         color: $white;
@@ -67,6 +79,14 @@
     font-weight: $normal;
     line-height: 1.28571;
     color: $green-accent;
+    padding-top: rem(9);
+    @include mq(md) {
+    }
+}
+.section-title__text--large {
     padding-top: rem(4);
-
+    @include mq(md) {
+        padding-top: rem(8);
+        margin-left: rem(-1);
+    }
 }

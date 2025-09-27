@@ -21,9 +21,10 @@
 
 .about__inner {
     width: inherit;
-    padding: rem(80) 0 rem(70);
+    padding: rem(84) 0 rem(74);
     @include mq(md) {
-        padding: rem(140) 0;
+        // padding: rem(140) 0;
+        padding: rem(145) 0 rem(139) 0;
     }
 }
 .about__contents {
@@ -58,6 +59,7 @@
     width: calc(281 / 345 * 100%);
     z-index: 0;
     @include mq(md) {
+        top: rem(80);
         max-width: rem(880);
     }
 }
@@ -67,7 +69,7 @@
     @include mq(md) {
         position: absolute;
         top: calc(200 / 661 * 100%);
-        left: calc(201 / 1080 * 100%);
+        left: calc(199 / 1080 * 100%);
         width: calc(840 / 1080 * 100%);
         margin-top: 0;
         display: flex;
@@ -89,7 +91,8 @@
     }
 }
 .about__text-block {
-    margin-top: rem(16);
+    margin-top: rem(15);
+    margin-left: rem(-1);
     font-size: rem(16);
     font-style: normal;
     font-family: $base-font-family;
@@ -97,6 +100,7 @@
     line-height: 1.5;
     color: $green;
     @include mq(md) {
+        margin-top: rem(16);
         color: $white;
         line-height: 1.5;
         width: calc(400 / 840 * 100%);
@@ -104,14 +108,20 @@
         margin-top: 0;
     }
 }
+.about__text {
+    @include mq(md) {
+        margin-top: rem(-1);
+    }
+}
 .about__btn {
-    margin-top: rem(50);
+    margin-top: rem(51);
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin-right: rem(17);
     @include mq(md) {
         margin-top: rem(40);
+        margin-right: rem(4);
     }
 }
 

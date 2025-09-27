@@ -11,7 +11,9 @@
     transition: left 0.3s ease;
     padding-top: rem(104);  // ヘッダーの高さ+rem(24)
 }
-
+.sp-nav__inner {
+    padding: 0 rem(23) 0 rem(22);
+}
 .sp-nav.is-active {
     left: 0;
 }
@@ -19,10 +21,11 @@
     position: static;
     width: 100%;
     height: auto;
-    padding: rem(40) 0;
+    padding: rem(40) 0 rem(40) rem(11);
     @include mq(md) {
         padding-top: rem(24);
         padding-bottom: rem(80);
+        padding-left: 0;
     }
 }
 
@@ -37,6 +40,13 @@
         row-gap: 0;
     }
 }
+.sp-nav--footer .sp-nav__menu {
+    column-gap: rem(16);
+    @include mq(md) {
+        column-gap: 0;
+    }
+}
+
 .sp-nav__menu--header {
     justify-content: center;
     @include mq(md) {
@@ -73,8 +83,15 @@
     }
 }
 
-.sp-nav__list{
+.sp-nav__list:first-child{
+    @include mq(md) {
     padding-left: rem(22);
+    }
+}
+.sp-nav__list:not(:first-child) {
+    @include mq(md) {
+        padding-left: rem(37);
+    }
 }
 .sp-nav__list + .sp-nav__list {
     // margin-top: rem(40);

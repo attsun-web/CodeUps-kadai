@@ -34,14 +34,16 @@
     font-size: rem(40);
     font-family: $third-font-family;
     font-weight: 400;
-    line-height: 1.25;
+    line-height: 1.2;
     color: $white;
     text-transform: uppercase;
-    letter-spacing: 0.216em;
+    letter-spacing: 21.6px;
+    margin-right: -21.6px;
     @include mq(md) {
-        font-size: rem(80);
-        line-height: 1.2;
-        letter-spacing: 0.432em;
+      font-size: rem(80);
+      line-height: 1.25;
+      letter-spacing: 43.2px;
+      margin-right: -43.2px;
     }
 }
 
@@ -50,10 +52,9 @@
     font-family: $second-font-family;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.65;
     color: $white;
     @include mq(md) {
-        font-size: rem(40);
     }
 }
 

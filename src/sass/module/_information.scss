@@ -6,16 +6,22 @@
 }
 
 .information__inner {
-  padding: rem(80) 0;
+  padding: rem(80) 0 rem(84) 0;
   @include mq(md) {
     padding: rem(100) 0;
+  }
+}
+.information__section-title {
+  @include mq(md) {
+    margin-right: rem(8);
   }
 }
 .information__contents {
   padding-top: rem(24);
   @include mq(md) {
-    padding-top: rem(40);
+    padding-top: rem(38);
     display: flex;
+    margin-left: rem(-4);
   }
 }
 
@@ -40,7 +46,8 @@
 .information__container {
   @include mq(md) {
     width: 50%;
-    padding-left: rem(48);
+    padding-left: rem(47);
+    padding-bottom: rem(4);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,20 +64,30 @@
   font-weight: $bold;
   line-height: 1.2;
   color: $green;
-  padding-bottom: rem(4);
+  padding-bottom: rem(3);
   border-bottom: rem(1) solid $green-accent;
+  @include mq(md) {
+    font-size: rem(24);
+    padding-bottom: rem(5);
+    line-height: 1;
+  }
 }
 
 .information__text {
-  margin-top: rem(8);
+  width: 99%;
+  margin-top: rem(7);
   font-size: rem(16);
   font-weight: $normal;
   line-height: 1.5;
   color: $green;
 }
 .information__btn {
-    margin-top: rem(40);
+    margin-top: rem(42);
+    margin-right: rem(4);
     display: flex;
     align-items: center;
     justify-content: center;
+    @include mq(md) {
+      margin-right: rem(7);
+    }
 }

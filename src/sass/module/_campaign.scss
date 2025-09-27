@@ -17,10 +17,10 @@
     overflow: hidden;   /* 左側にはみ出させない */
     padding: rem(24) 0;  // box-shadowを見せるための余白
     margin-left: auto;
-    width: 96%;
+    width: 96.8%;       // .swiper-slide:first-childの左側にはみ出す分(3px)を考慮
 
     @include mq(md) {
-        width: 87.5%;
+        width: 87.7%;
         padding: rem(40) 0;  // box-shadowを見せるための余白
     }
 }
@@ -41,7 +41,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: rem(5);
     @include mq(md) {
-        margin-top: rem(40);
+        margin-top: rem(39);
     }
 }

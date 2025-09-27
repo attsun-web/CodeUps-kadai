@@ -21,13 +21,14 @@
 }
 .swiper-button-prev {
     @include mq(md) {
+        top: 1px;
         right: rem(340);
         left: auto;
     }
 }
 .swiper-button-next {
     @include mq(md) {
-        right: rem(170);
+        right: rem(180);
         left: auto;
     }
 }
