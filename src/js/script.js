@@ -104,7 +104,7 @@ var swiper = new Swiper(".mySwiper", {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // swiper.autoplay.start();
+        swiper.autoplay.start();
         observer.unobserve(target); // 1回だけ実行
       }
     });
