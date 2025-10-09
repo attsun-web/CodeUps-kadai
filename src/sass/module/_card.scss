@@ -3,27 +3,15 @@
 .card {
     box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
     display: block;
-}
-
-.card__img {
-    position: relative;
-}
-
-.card__img::before {
-    content: "";
-    display: block;
-    padding-top: 67.14285714%;  // height / width (188 /280 * 100)
-    @include mq(md) {
-        padding-top: 66.96696697%;  // height / width (223 /333 * 100)
-    }
-}
-.card__img img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
+}
+
+.card__img img {
     object-fit: cover;
+    aspect-ratio: 280 / 188;
+    @include mq(md) {
+        aspect-ratio: 333 / 223;
+    }
 }
 
 .card__body {

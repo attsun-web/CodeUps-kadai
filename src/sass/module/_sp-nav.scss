@@ -10,6 +10,7 @@
     z-index: 2;
     transition: left 0.3s ease;
     padding-top: rem(104);  // ヘッダーの高さ+rem(24)
+    overflow-y: auto;
 }
 .sp-nav__inner {
     padding: 0 rem(23) 0 rem(22);
@@ -120,6 +121,16 @@
     background-size: contain;
     width: rem(18);
     height: rem(18);
+}
+
+.sp-nav__title,
+.sp-nav__link {
+    transition: opacity 0.3s ease;
+}
+
+.sp-nav__title:hover,
+.sp-nav__link:hover {
+    opacity: 0.7;
 }
 
 .sp-nav__link{

@@ -21,13 +21,14 @@
 }
 .swiper-button-prev {
     @include mq(md) {
-        top: 1px;
+        top: rem(121);
         right: rem(340);
         left: auto;
     }
 }
 .swiper-button-next {
     @include mq(md) {
+        top: rem(120);
         right: rem(180);
         left: auto;
     }
@@ -55,6 +56,10 @@
 .swiper-slide img {
   height: auto;
   width: 100%;
+}
+
+.swiper-slide {
+  height: auto;
 }
 
 .swiper-slide:first-child {

@@ -15,3 +15,10 @@
 .pc-nav__item + .pc-nav__item {
   padding-left: rem(40);
 }
+
+.pc-nav__item a {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

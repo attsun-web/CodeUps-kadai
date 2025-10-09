@@ -49,50 +49,50 @@
         <ul class="pc-nav__items">
           <li class="pc-nav__item nav-title">
             <a href="#">
-              <h2 class="nav-title__main-title">Campaign</h2>
-              <p class="nav-title__sub-title">キャンペーン</p>
+              <p class="nav-title__main-title">Campaign</p>
+              <h2 class="nav-title__sub-title">キャンペーン</h2>
             </a>
           </li>
           <li class="pc-nav__item nav-title">
             <a href="#">
-              <h2 class="nav-title__main-title">About us</h2>
-              <p class="nav-title__sub-title">私たちについて</p>
+              <p class="nav-title__main-title">About us</p>
+              <h2 class="nav-title__sub-title">私たちについて</h2>
             </a>
           </li>
           <li class="pc-nav__item nav-title">
             <a href="#">
-              <h2 class="nav-title__main-title">Information</h2>
-              <p class="nav-title__sub-title">ダイビング情報</p>
+              <p class="nav-title__main-title">Information</p>
+              <h2 class="nav-title__sub-title">ダイビング情報</h2>
             </a>
           </li>
           <li class="pc-nav__item nav-title">
             <a href="#">
-              <h2 class="nav-title__main-title">Blog</h2>
-              <p class="nav-title__sub-title">ブログ</p>
+              <p class="nav-title__main-title">Blog</p>
+              <h2 class="nav-title__sub-title">ブログ</h2>
             </a>
           </li>
           <li class="pc-nav__item nav-title">
             <a href="#">
-              <h2 class="nav-title__main-title">Voice</h2>
-              <p class="nav-title__sub-title">お客様の声</p>
+              <p class="nav-title__main-title">Voice</p>
+              <h2 class="nav-title__sub-title">お客様の声</h2>
             </a>
           </li>
           <li class="pc-nav__item nav-title">
             <a href="#">
-              <h2 class="nav-title__main-title">Price</h2>
-              <p class="nav-title__sub-title">料金一覧</p>
+              <p class="nav-title__main-title">Price</p>
+              <h2 class="nav-title__sub-title">料金一覧</h2>
             </a>
           </li>
           <li class="pc-nav__item nav-title">
             <a href="#">
-              <h2 class="nav-title__main-title">FAQ</h2>
-              <p class="nav-title__sub-title">よくある質問</p>
+              <p class="nav-title__main-title">FAQ</p>
+              <h2 class="nav-title__sub-title">よくある質問</h2>
             </a>
           </li>
           <li class="pc-nav__item nav-title">
             <a href="#">
-              <h2 class="nav-title__main-title">Contact</h2>
-              <p class="nav-title__sub-title">お問合せ</p>
+              <p class="nav-title__main-title">Contact</p>
+              <h2 class="nav-title__sub-title">お問合せ</h2>
             </a>
           </li>
         </ul>
@@ -174,7 +174,7 @@
   <div id="loading" class="loading">
     <!-- タイトル -->
     <div id="loading__message" class="loading__message hidden">
-      <h2 class="loading__message-title">diving</h2>
+      <p class="loading__message-title">diving</p>
       <p class="loading__message-text">into the ocean</p>
     </div>
     <!-- 分割画像 -->
@@ -205,18 +205,18 @@
       </picture>
     </div>
     <div id="slider__message" class="slider__message">
-      <h2 class="slider__message-title">diving</h2>
+      <p class="slider__message-title">diving</p>
       <p class="slider__message-text">into the ocean</p>
     </div>
   </div>
 
   <!-- キャンペーン -->
   <section class="campaign">
-    <div class="campaign__inner">
+    <div class="inner campaign__inner">
       <!-- タイトル -->
       <div class="section-title">
-        <h2 class="section-title__main-title">Campaign</h2>
-        <p class="section-title__sub-title">キャンペーン</p>
+        <p class="section-title__main-title">Campaign</p>
+        <h2 class="section-title__sub-title">キャンペーン</h2>
       </div>
       <!-- スライダー矢印 -->
       <div class="campaign__slider-next swiper-button-next"></div>
@@ -323,13 +323,19 @@
   <section class="about">
     <div class="about__inner inner">
       <div class="section-title">
-        <h2 class="section-title__main-title">About us</h2>
-        <p class="section-title__sub-title about__subtitle">私たちについて</p>
+        <p class="section-title__main-title">About us</p>
+        <h2 class="section-title__sub-title about__subtitle">私たちについて</h2>
       </div>
       <div class="about__contents">
         <div class="about__images">
-          <img src="./assets/images/sp/about-us1.jpg" alt="about-us1" class="about__image1">
-          <img src="./assets/images/sp/about-us2.jpg" alt="about-us2" class="about__image2">
+          <picture>
+            <source srcset="./assets/images/sp/about-us1.jpg" media="(max-width: 767px)">
+            <img src="./assets/images/common/about-us1-md.jpg" alt="about-us1" class="about__image1" />
+          </picture>
+          <picture>
+            <source srcset="./assets/images/sp/about-us2.jpg" media="(max-width: 767px)">
+            <img src="./assets/images/common/about-us2-md.jpg" alt="about-us2" class="about__image2" />
+          </picture>
         </div>
         <div class="about__text-area">
           <h3 class="about__title">Dive into<br>the Ocean</h3>
@@ -352,13 +358,13 @@
   <section class="information">
     <div class="information__inner inner">
       <div class="section-title information__section-title">
-        <h2 class="section-title__main-title">Information</h2>
-        <p class="section-title__sub-title">ダイビング情報</p>
+        <p class="section-title__main-title">Information</p>
+        <h2 class="section-title__sub-title">ダイビング情報</h2>
       </div>
       <div class="information__contents">
 
         <div class="information__image-block colorbox">
-          <img src="./assets/images/sp/infomation.jpg" alt="information">
+          <img src="https://placehold.jp/500x1500.png" alt="information">
         </div>
         <div class="information__container">
           <div class="information__text-block">
@@ -381,8 +387,8 @@
     <div class="blog__bg"></div>
     <div class="blog__inner inner">
       <div class="section-title blog__section-title">
-        <h2 class="section-title__main-title section-title__main-title--light">Blog</h2>
-        <p class="section-title__sub-title section-title__sub-title--light">ブログ</p>
+        <p class="section-title__main-title section-title__main-title--light">Blog</p>
+        <h2 class="section-title__sub-title section-title__sub-title--light">ブログ</h2>
       </div>
       <div class="blog__contents blog-list">
         <a href="#" class="blog-list__item blog-card">
@@ -435,8 +441,8 @@
   <section class="voice">
     <div class="voice__inner inner">
       <div class="section-title voice__section-title">
-        <h2 class="section-title__main-title">Voice</h2>
-        <p class="section-title__sub-title voice__section-sub-title">お客様の声</p>
+        <p class="section-title__main-title">Voice</p>
+        <h2 class="section-title__sub-title voice__section-sub-title">お客様の声</h2>
       </div>
       <div class="voice-list voice__contents">
         <a href="#" class="voice-list__item voice-card">
@@ -491,8 +497,8 @@
   <section class="price">
     <div class="price__inner inner">
       <div class="section-title price__section-title">
-        <h2 class="section-title__main-title">Price</h2>
-        <p class="section-title__sub-title">料金一覧</p>
+        <p class="section-title__main-title">Price</p>
+        <h2 class="section-title__sub-title">料金一覧</h2>
       </div>
       <div class="price__contents">
         <div class="price__image colorbox">
@@ -615,9 +621,9 @@
         <div class="contact__border md-only"></div>
         <div class="contact__title-btn">
           <div class="section-title--large">
-            <h2 class="section-title__main-title section-title__main-title--large">Contact</h2>
-            <p class="section-title__sub-title section-title__sub-title--large">お問い合わせ</p>
-            <p class="section-title__text section-title__text--large">ご予約・お問い合わせはコチラ</p>
+            <p class="section-title__main-title section-title__main-title--large">Contact</p>
+            <h2 class="section-title__sub-title section-title__sub-title--large">お問い合わせ</h2>
+            <p class="section-title__text sectio                                                                                                                                                                                                                            n-title__text--large">ご予約・お問い合わせはコチラ</p>
           </div>
           <div class="contact__btn">
             <a href="#" class="btn btn--slide">

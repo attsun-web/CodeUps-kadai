@@ -3,6 +3,7 @@
 .campaign {
     position: relative;
     width: 100%;
+    overflow: hidden;   /* 左側にはみ出させない */
 }
 .campaign__inner {
     width: inherit;
@@ -11,16 +12,12 @@
         margin-top: rem(120);
     }
 }
-
 .campaign__slider {
     position: relative;
     overflow: hidden;   /* 左側にはみ出させない */
     padding: rem(24) 0;  // box-shadowを見せるための余白
-    margin-left: auto;
-    width: 96.8%;       // .swiper-slide:first-childの左側にはみ出す分(3px)を考慮
-
+    margin-right: calc(50% - 50vw); // 画面右寄せ
     @include mq(md) {
-        width: 87.7%;
         padding: rem(40) 0;  // box-shadowを見せるための余白
     }
 }

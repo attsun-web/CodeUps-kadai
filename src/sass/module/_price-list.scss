@@ -32,11 +32,8 @@
     }
 }
 .price-list__price {
+    padding-left: rem(10);
     @include mq(md) {
         padding-right: rem(1);
-        // padding-bottom: rem(1);
     }
 }
-// .price-list__item + .price-list__item {
-//     margin-top: rem(8);
-// }
