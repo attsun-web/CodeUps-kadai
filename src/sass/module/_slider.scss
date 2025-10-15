@@ -54,6 +54,7 @@
     font-weight: 400;
     line-height: 1.65;
     color: $white;
+    padding-right: rem(3);
     @include mq(md) {
     }
 }

@@ -31,7 +31,7 @@
     }
 }
 .voice__inner {
-    padding-top: rem(85);         // 左右の余白はinnerで制御
+    padding-top: rem(84);         // 左右の余白はinnerで制御
     padding-bottom: rem(84);      // 左右の余白はinnerで制御
     @include mq(md) {
         padding-top: rem(142);      // 左右の余白はinnerで制御
@@ -56,7 +56,7 @@
     }
 }
 .voice__btn {
-    margin-top: rem(41);
+    margin-top: rem(40);
     display: flex;
     align-items: center;
     justify-content: center;

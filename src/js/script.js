@@ -69,7 +69,7 @@ function startSlider() {
 }
 
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1.27, // 1枚＋α
+    slidesPerView: 1.2631, // 1枚＋α
     spaceBetween: 24, // スライド間のスペース
     slidesPerGroup: 1,
     loopedSlides: 999, // 余り移動を防ぐ
@@ -92,7 +92,7 @@ var swiper = new Swiper(".mySwiper", {
         spaceBetween: 24, // スライド間のスペース
       },
       1440: {
-        slidesPerView: 3.49, // 3枚＋α
+        slidesPerView: 3.4852, // 3枚＋α
         spaceBetween: 40, // スライド間のスペース
       }
     }
@@ -104,7 +104,7 @@ var swiper = new Swiper(".mySwiper", {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // swiper.autoplay.start();
+        swiper.autoplay.start();
         observer.unobserve(target); // 1回だけ実行
       }
     });

@@ -6,7 +6,7 @@
 .voice-card__inner{
     padding: rem(15) rem(16) rem(24) rem(16);
     @include mq(md) {
-        padding: rem(24);
+        padding: rem(22) rem(24) rem(24) rem(24);
     }
 }
 
@@ -68,6 +68,11 @@
     }
 }
 
+.voice-card__title--wide {
+    line-height: 1.5;
+    padding-bottom: 0;
+    padding-top: rem(2);
+}
 
 .voice-card__img {
     position: relative;
@@ -95,7 +100,7 @@
 }
 
 .voice-card__body {
-    margin-top: rem(15);
+    margin-top: rem(16);
     @include mq(md) {
         margin-top: rem(40);
     }
