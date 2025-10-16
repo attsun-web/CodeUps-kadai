@@ -3,10 +3,12 @@
 .campaign {
     position: relative;
     width: 100%;
+    overflow: hidden;      /* 右側にはみ出させない */
 }
 .campaign__inner {
     width: inherit;
     margin-top: rem(40);
+    margin-bottom: rem(4);
     @include mq(md) {
         margin-top: rem(120);
     }
