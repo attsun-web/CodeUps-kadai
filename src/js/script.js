@@ -47,7 +47,7 @@ const header = document.querySelector("header");
 
 // スライダーループ機能
 function startSlider() {
-  const slides = document.querySelectorAll(".slider__img");
+  const slides = document.querySelectorAll(".js-slider__img");
 
   let current = 0;
 
@@ -68,7 +68,7 @@ function startSlider() {
   }, 4000); // 2s + 3s表示
 }
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".js-campaign-swiper", {
     slidesPerView: 1.2631, // 1枚＋α
     spaceBetween: 24, // スライド間のスペース
     slidesPerGroup: 1,
@@ -150,7 +150,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
 
-  const topBtn = $('.page-top');
+  const topBtn = $('.js-page-top');
   topBtn.hide();
 
   // ボタンの表示設定

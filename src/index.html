@@ -189,19 +189,19 @@
     <div class="slider__images">
       <picture>
         <source srcset="./assets/images/sp/first-view-sp.jpg" media="(max-width: 767px)">
-        <img src="./assets/images/common/first-view.jpg" alt="slider__img1" class="slider__img" />
+        <img src="./assets/images/common/first-view.jpg" alt="slider__img1" class="slider__img js-slider__img" />
       </picture>
       <picture>
         <source srcset="./assets/images/sp/second-view-sp.jpg" media="(max-width: 767px)">
-        <img src="./assets/images/common/second-view.jpg" alt="slider__img2" class="slider__img" />
+        <img src="./assets/images/common/second-view.jpg" alt="slider__img2" class="slider__img js-slider__img" />
       </picture>
       <picture>
         <source srcset="./assets/images/sp/third-view-sp.jpg" media="(max-width: 767px)">
-        <img src="./assets/images/common/third-view.jpg" alt="slider__img3" class="slider__img" />
+        <img src="./assets/images/common/third-view.jpg" alt="slider__img3" class="slider__img js-slider__img" />
       </picture>
       <picture>
         <source srcset="./assets/images/sp/forth-view-sp.jpg" media="(max-width: 767px)">
-        <img src="./assets/images/common/forth-view.jpg" alt="slider__img4" class="slider__img" />
+        <img src="./assets/images/common/forth-view.jpg" alt="slider__img4" class="slider__img js-slider__img" />
       </picture>
     </div>
     <div id="slider__message" class="slider__message">
@@ -212,7 +212,7 @@
 
   <!-- キャンペーン -->
   <section class="campaign">
-    <div class="inner campaign__inner">
+    <div class="campaign__inner inner">
       <!-- タイトル -->
       <div class="section-title">
         <p class="section-title__main-title">Campaign</p>
@@ -224,7 +224,7 @@
       <!-- スライダー -->
       <div class="campaign__slider-wrapper">
         <div class="campaign__slider">
-          <div class="swiper mySwiper">
+          <div class="swiper js-campaign-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                   <a href="#" class="card">
@@ -357,7 +357,7 @@
 
   <section class="information">
     <div class="information__inner inner">
-      <div class="section-title information__section-title">
+      <div class="information__section-title section-title">
         <p class="section-title__main-title">Information</p>
         <h2 class="section-title__sub-title">ダイビング情報</h2>
       </div>
@@ -386,7 +386,7 @@
   <section class="blog">
     <div class="blog__bg"></div>
     <div class="blog__inner inner">
-      <div class="section-title blog__section-title">
+      <div class="blog__section-title section-title">
         <p class="section-title__main-title section-title__main-title--light">Blog</p>
         <h2 class="section-title__sub-title section-title__sub-title--light">ブログ</h2>
       </div>
@@ -440,11 +440,11 @@
 
   <section class="voice">
     <div class="voice__inner inner">
-      <div class="section-title voice__section-title">
+      <div class="voice__section-title section-title">
         <p class="section-title__main-title">Voice</p>
         <h2 class="section-title__sub-title voice__section-sub-title">お客様の声</h2>
       </div>
-      <div class="voice-list voice__contents">
+      <div class="voice__contents voice-list">
         <a href="#" class="voice-list__item voice-card">
           <div class="voice-card__inner">
             <div class="voice-card__header">
@@ -496,7 +496,7 @@
 
   <section class="price">
     <div class="price__inner inner">
-      <div class="section-title price__section-title">
+      <div class="price__section-title section-title">
         <p class="section-title__main-title">Price</p>
         <h2 class="section-title__sub-title">料金一覧</h2>
       </div>
@@ -637,8 +637,8 @@
     </div>
   </section>
 
-  <div class="page-top arrow-btn">
-    <a href="#top" class="page-top__link js-page-top">
+  <div class="page-top arrow-btn js-page-top">
+    <a href="#top" class="page-top__link">
     </a>
   </div>
 

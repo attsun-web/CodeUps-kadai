@@ -13,7 +13,7 @@
     overflow-y: auto;
 }
 .sp-nav__inner {
-    padding: 0 rem(23) 0 rem(22);
+    padding: 0 rem(23) rem(80) rem(22);
 }
 .sp-nav.is-active {
     left: 0;
@@ -117,7 +117,7 @@
     position: absolute;
     top: rem(0);    // テキスト高さの中央
     left: rem(-22);
-    background-image: url("../images/common/_ヒトデ.png");
+    background-image: url("../images/common/hitode.png");
     background-size: contain;
     width: rem(18);
     height: rem(18);

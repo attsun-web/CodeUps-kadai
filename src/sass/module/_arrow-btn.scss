@@ -8,6 +8,7 @@
   border-radius: 50%;
   border: 1px solid $green-accent;
   background-color: $white;
+  transition: all 0.3s ease;
   @include mq(md) {
     width: 80px;
     height: 80px;
