@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.blog-content__inner {
+    padding-bottom: rem(26);
+    @include mq(md) {
+      padding-bottom: 0;
+    }
+}
+
+.blog-content .blog-card__img {
+    overflow: hidden;
+}
+
+.blog-content .blog-card:hover .blog-card__img img {
+    transform: scale(1.1);
+}

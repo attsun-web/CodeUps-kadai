@@ -1,0 +1,76 @@
+@use "global" as *;
+
+
+.blog-detail__date {
+    font-family: $second-font-family;
+    font-size: rem(14);
+    line-height: 1.25;
+    color: $green;
+}
+
+.blog-detail__title{
+    font-size: rem(24);
+    font-weight: 500;
+    line-height: 1.2;
+    color: $green;
+    padding-bottom: rem(10);
+    border-bottom: rem(1) solid $green-accent;
+    margin-top: rem(8);
+    @include mq(md) {
+        font-size: rem(32);
+        padding-bottom: rem(8);
+    }
+}
+
+.blog-detail__img {
+    margin-top: rem(24);
+    aspect-ratio: 345 / 231;
+    object-fit: cover;
+    @include mq(md) {
+        max-width: rem(700);
+        aspect-ratio: 700 / 468;
+        margin-top: rem(40);
+    }
+}
+
+.blog-detail__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.blog-detail__text {
+    font-size: rem(16);
+    line-height: 1.5;
+    color: $green;
+    margin-top: rem(24);
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}
+.blog-detail__list {
+    margin-top: rem(24);
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}
+.blog-detail__item {
+    position: relative;
+    font-size: rem(16);
+    line-height: 1.5;
+    color: $green;
+    margin-top: rem(4);
+    padding-left: rem(21);
+    @include mq(md) {
+    }
+}
+.blog-detail__item::before {
+    content: "";
+    position: absolute;
+    top: rem(3);    // テキスト高さの中央
+    left: rem(0);
+    background-image: url("../images/common/hitode-icon.png");
+    background-size: contain;
+    width: rem(18);
+    height: rem(18);
+
+}

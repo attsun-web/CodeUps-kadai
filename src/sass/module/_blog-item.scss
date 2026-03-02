@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.blog-item {
+    display: grid;
+    grid-template-columns: rem(121) 1fr;
+    gap: rem(16);
+    padding: rem(16);
+    box-shadow: rem(0) rem(2) rem(4) rgba(0, 0, 0, 0.25);
+}
+
+.blog-item__img {
+    width: rem(121);
+    height: rem(90);
+    object-fit: cover;
+}
+
+.blog-item__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.blog-item__date {
+    font-size: rem(12);
+    color: $green;
+    font-family: $second-font-family;
+    line-height: 1.5;
+}
+.blog-item__title {
+    font-size: rem(16);
+    font-weight: 500;
+    color: $green;
+    margin-top: rem(4);
+    line-height: 1.2;
+}

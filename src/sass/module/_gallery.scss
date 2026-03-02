@@ -1,0 +1,87 @@
+@use "global" as *;
+
+.gallery {
+    position: relative;
+}
+.gallery::before {
+    content: "";
+    @include mq(md) {
+        position: absolute;
+        top: rem(40);
+        left: min(calc(50% + rem(331)), (100% - rem(309) - $padding-pc));
+        width: rem(309);
+        height: rem(146);
+        background-image: url("../images/common/bg-img-contact.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.gallery__inner {
+    padding-top: rem(35);
+    padding-bottom: rem(26);
+    @include mq(md) {
+        padding-top: rem(120);
+    }
+}
+.gallery__contents {
+    margin-top: rem(36);
+    @include mq(md) {
+        margin-top: rem(80);
+        display: block;
+    }
+}
+.gallery-row--top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(8); /* 余白（これも高さ計算に含まれる） */
+    @include mq(md) {
+        grid-template-columns: 580fr 746fr;
+    }
+}
+
+.gallery__item {
+  width: 100%;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ①：②＋③と同じ高さ */
+.gallery-row--top .gallery__item--1 {
+    grid-row: auto;
+    @include mq(md) {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+}
+.gallery-row--bottom {
+    margin-top: rem(8);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(8); /* 余白（これも高さ計算に含まれる） */
+    @include mq(md) {
+        grid-template-columns: 746fr 580fr;
+    }
+}
+
+/* ④・⑤：必ず左列 */
+.gallery-row--bottom .gallery__item--4,
+.gallery-row--bottom .gallery__item--5 {
+    @include mq(md) {
+      grid-column: 1;
+    }
+}
+
+/* ⑥：④＋⑤の右側に固定 */
+.gallery-row--bottom .gallery__item--6 {
+    grid-row: auto;
+    @include mq(md) {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+}

@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: rem(12);
+    margin-top: rem(80);
+    margin-bottom: rem(6);
+}

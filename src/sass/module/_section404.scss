@@ -1,0 +1,68 @@
+@use "global" as *;
+
+.section404 {
+    position: relative;
+    width: 100%;
+    margin-top: rem(0);
+    @include mq(md) {
+        margin-top: rem(0);
+    }
+}
+.section404::before {
+    content: "";
+    position: absolute;
+    top: rem(-30);
+    left: rem(15);
+    width: rem(345);
+    height: rem(345);
+    background-image: url("../images/common/404-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    @include mq(md) {
+        position: absolute;
+        top: rem(-30);
+        left: rem(180);
+        width: rem(698);
+        height: rem(698);
+    }
+}
+.section404__inner {
+    text-align: center;
+}
+.section404__title {
+    padding-left: rem(35);
+    padding-top: rem(52);
+    font-size: rem(80);
+    line-height: 1.2;
+    letter-spacing: 0.5em;
+    color: $white;
+    font-family: $third-font-family;
+    font-weight: 400;
+    @include mq(md) {
+        padding-left: rem(85);
+        padding-top: rem(110);
+        font-size: rem(160);
+    }
+}
+.section404__text {
+    color: $white;
+    font-family: $third-font-family;
+    margin-top: rem(-5);
+    @include mq(md) {
+        font-weight: 400;
+        padding-top: rem(30);
+    }
+
+}
+.section404__btn {
+    margin-top: rem(40);
+    margin-bottom: rem(40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mq(md) {
+        margin-top: rem(80);
+        margin-bottom: rem(150);
+    }
+}

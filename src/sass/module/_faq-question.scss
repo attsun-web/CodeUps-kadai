@@ -1,0 +1,51 @@
+@use "global" as *;
+
+/* 質問ボタン */
+.faq-question {
+    width: 100%;
+    background: $green-accent;
+    color: $white;
+    border: none;
+    padding: rem(18) rem(16);
+    font-size: rem(16);
+    font-weight: $normal;
+    line-height: 1.2;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    @include mq(md) {
+        padding: rem(28) rem(40);
+        font-size: rem(20);
+    }
+}
+
+.faq-question__icon {
+    position: relative;
+}
+
+.faq-question__icon::before,
+.faq-question__icon::after {
+    position: absolute;
+    content:'';
+    top: 50%;
+    right: 0;
+    width: rem(28);
+    height: rem(1);
+    margin: auto;
+    background: $white;
+    transform: translateY(-50%);
+    @include mq(md) {
+        width: rem(32);
+        height: rem(2);
+    }
+}
+.faq-question__icon::after {
+    transform: rotate(-90deg);
+    transition: transform 0.3s ease 0s;
+}
+
+.faq-question.is-open .faq-question__icon::after {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease 0s;
+
+}

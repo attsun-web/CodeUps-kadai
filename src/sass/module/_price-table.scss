@@ -1,0 +1,127 @@
+@use "global" as *;
+
+/* ==============================
+   Variables
+============================== */
+$pc-table-width: rem(700);
+$pc-title-width: rem(200);
+$pc-course-width: rem(340);
+$pc-price-width: rem(160);
+
+
+$sp-course-width: rem(240);
+$sp-price-width: rem(103);
+
+
+.price-table {
+    width: rem(345);
+    border: 1px solid $green-accent;
+    background: $white;
+    margin: 0 auto;
+    @include mq(md) {
+        width: rem(700);
+        display: grid;
+        grid-template-columns: $pc-title-width rem(500); /* 200px | 500px */
+    }
+}
+
+
+.price-table__title {
+    background: $green-accent;
+    color: $white;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: rem(8);
+    justify-content: center;
+    padding: rem(8);
+    @include mq(md) {
+        flex-direction: column;
+        align-items: center;
+        padding: rem(24) rem(16);
+    }
+}
+
+.price-table__title img {
+    width: rem(24);
+    height: auto;
+    @include mq(md) {
+        width: rem(64);
+    }
+}
+
+
+.price-table__title span {
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: 1.5;
+}
+
+.price-table__body {
+    display: grid;
+}
+
+
+.price-row {
+    position: relative;
+    display: grid;
+    grid-template-columns: $sp-course-width $sp-price-width; /* 240px | 103 px */
+    align-items: center;
+    border-bottom: 1px solid $green-accent;
+    @include mq(md) {
+        grid-template-columns: $pc-course-width $pc-price-width; /* 340px | 160px */
+    }
+}
+.price-row::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: $sp-course-width;
+    width: 1px;
+    background-color: $green-accent;
+    @include mq(md) {
+        left: $pc-course-width;
+    }
+}
+
+.price-row:first-child {
+    height: rem(64);
+    @include mq(md) {
+        height: rem(60);
+    }
+}
+
+.price-row:nth-child(n + 1) {
+    height: rem(60);
+}
+.price-row:last-child {
+    border-bottom: none;
+}
+
+
+.price-row p {
+    width: $sp-course-width;
+    font-size: rem(16);
+    line-height: 1.5;
+    text-align: center;
+    @include mq(md) {
+        width: $pc-course-width;
+        text-align: left;
+        padding-left: rem(16);
+    }
+}
+
+
+.price-row span {
+    width: $sp-price-width;
+    text-align: right;
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 1.5;
+    text-align: center;
+    @include mq(md) {
+        width: $pc-price-width;
+        text-align: right;
+        padding-right: rem(16);
+    }
+}

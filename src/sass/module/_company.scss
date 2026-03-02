@@ -29,7 +29,7 @@
     margin-top: rem(6);
     @include mq(md) {
         width: rem(440);
-        margin-top: rem(8);
+        margin-top: rem(6);
     }
 }
 .company__info {
@@ -42,7 +42,7 @@
         align-items: flex-start;
         flex-direction: row;
         gap: rem(20);
-        margin-top: rem(26);
+        margin-top: rem(24);
     }
 }
 .company__info-list {

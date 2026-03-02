@@ -1,0 +1,59 @@
+@use "global" as *;
+
+
+.thanks-content {
+    position: relative;
+    width: 100%;
+    margin-top: rem(52);
+    @include mq(md) {
+        margin-top: rem(150);
+    }
+}
+.thanks-content::before {
+    content: "";
+    position: absolute;
+    top: rem(-24);
+    right: calc(100% - rem(120) - $padding-sp);
+    width: rem(120);
+    height: rem(55);
+    background-image: url("../images/common/bg-img-voice.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    @include mq(md) {
+        position: absolute;
+        top: rem(-30);
+        right: min(calc(50% + rem(319)), calc(100% - rem(301) - $padding-pc));
+        width: rem(301);
+        height: rem(138);
+    }
+}
+.thanks-content__inner {
+    padding-bottom: rem(26);
+    margin: 0 auto;
+    text-align: center;
+    @include mq(md) {
+      padding-bottom: 0;
+    }
+}
+.thanks-content__title {
+    font-size: rem(16);
+    font-family: $third-font-family;
+    font-weight: 400;
+    line-height: 1;
+    color: $green;
+    margin-bottom: rem(40);
+    @include mq(md) {
+      font-size: rem(16);
+    }
+}
+.thanks-content__text {
+    font-size: rem(16);
+    line-height: 1;
+    color: $green;
+    margin-bottom: rem(144);
+    @include mq(md) {
+      font-size: rem(16);
+      margin-bottom: rem(132);
+    }
+}

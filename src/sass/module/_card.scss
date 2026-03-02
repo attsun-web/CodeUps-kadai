@@ -20,7 +20,11 @@
       padding: rem(24) rem(16) rem(40);
     }
 }
-
+.card__body--wide {
+    @include mq(md) {
+        padding: rem(24) rem(24) rem(42);
+    }
+}
 .card__category {
     font-size: rem(12);
     line-height: 1.83333;
@@ -42,6 +46,28 @@
         font-size: rem(16);
         line-height: 1.5;
         margin-top: rem(5);
+    }
+}
+.card__body--wide .card__title {
+    @include mq(md) {
+        margin-top: rem(4);
+        font-size: rem(24);
+        line-height: 1.25;
+    }
+}
+.card__body--wide .card__contents {
+    @include mq(md) {
+        margin-top: rem(8);
+    }
+}
+.card__body--wide .card__text {
+    @include mq(md) {
+        margin-top: rem(24);
+    }
+}
+.card__body--wide .card__price {
+    @include mq(md) {
+        gap: rem(40);
     }
 }
 
@@ -111,5 +137,48 @@
     text-align: left;
     @include mq(md) {
         font-size: clamp(24px, 3vw, 40px);
+    }
+}
+
+.card__details{
+    @include mq(md) {
+        margin-top: rem(24);
+    }
+}
+.card__description{
+    @include mq(md) {
+        text-align: start;
+    }
+}
+.card__period{
+    @include mq(md) {
+        font-size: rem(16);
+        color: $green-accent;
+        font-family: $third-font-family;
+        font-weight: $bold;
+        line-height: 1.125;
+        padding-right: rem(15);
+        margin-top: rem(32);
+        font-weight: bold;
+        letter-spacing: 0.015em;
+    }
+}
+
+.card__guide {
+    @include mq(md) {
+        font-size: rem(14);
+        color: $green-accent;
+        font-family: $base-font-family;
+        line-height: 1.28571429;
+        margin-top: rem(7);
+    }
+}
+.card__btn{
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: rem(15);
+        margin-right: rem(2);
     }
 }

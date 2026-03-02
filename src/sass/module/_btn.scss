@@ -12,9 +12,20 @@
   color: $green-accent;
   background-color: $white;
   border: 1px solid $green-accent;
-//   overflow: hidden;
   transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
 }
+// /* 外枠 */
+// .btn::before {
+//   content: '';
+//   position: absolute;
+//   top: rem(3);
+//   left: rem(3);
+//   width: 100%;
+//   height: 100%;
+//   border: 1px solid $green-accent;
+//   pointer-events: none;
+//   z-index: -1;
+// }
 .btn__text {
     font-size: rem(14);
     font-family: $second-font-family;
@@ -49,7 +60,6 @@
   background-color: $green-accent;
   color: $white;
 //   overflow: hidden;
-  position: relative;
   z-index: 1;
 }
 .btn.btn--slide::after {     /* ホバー（スライド）後の状態 */
@@ -77,13 +87,78 @@
 .btn.btn--slide:hover::after {
   transform: scale(1, 1);
 }
-.btn__frame {
+// .btn__frame {
+//   position: absolute;
+//   top: rem(3);
+//   left: rem(3);
+//   width: rem(202);
+//   height: rem(54);
+//   border: 1px solid $green-accent;
+//   background-color: transparent;
+//   z-index: -2;
+// }
+/* 反転（文字・背景・線を入れ替え）ボタン */
+.btn.btn--invert {
+  background-color: $white;
+  color: $green-accent;
+  border: 1px solid $white;
+  position: relative;
+  z-index: 1;
+}
+.btn.btn--invert .btn__icon {
+  background-color: $green-accent;
+}
+.btn.btn--invert .btn__icon::before {
+  border-right: 1px solid $green-accent;
+}
+.btn.btn--invert:hover {
+  background-color: $green-accent;
+  color: $white;
+  border-color: $white;
+}
+.btn.btn--invert:hover .btn__icon {
+  background-color: $white;
+}
+.btn.btn--invert:hover .btn__icon::before {
+  border-right: 1px solid $white;
+}
+.btn.btn--invert.btn--slide {            /* ホバー（スライド）前の状態 */
+  background-color: $white;
+  color: $green-accent;
+  z-index: 1;
+}
+.btn.btn--invert.btn--slide::after {     /* ホバー（スライド）後の状態 */
+  background-color: $green-accent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+.btn.btn--invert.btn--slide:hover {
+  color: $white;
+}
+// .btn:hover .btn__icon {
+//   background: $green-accent;
+// }
+// .btn:hover .btn__icon::before {
+//   border-right: 1px solid $green-accent;
+// }
+.btn.btn--invert.btn--slide:hover::after {
+  transform: scale(1, 1);
+}
+.btn.btn--invert .btn__frame {
   position: absolute;
   top: rem(3);
   left: rem(3);
   width: rem(202);
   height: rem(54);
-  border: 1px solid $green-accent;
+  border: 1px solid $white;
   background-color: transparent;
   z-index: -2;
 }

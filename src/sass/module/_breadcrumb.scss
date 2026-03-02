@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.breadcrumb__inner {
+    display: flex;
+    font-size: rem(14);
+    padding-top: rem(8);
+}
+.breadcrumb__inner li:not(:last-child)::after {
+	content: ">";
+	margin: 0 rem(8);
+}
+
+.breadcrumb__inner li a:not(:last-child)::after {
+	margin-right: rem(8);
+}
+.breadcrumb--404 {
+    color: $white;
+}

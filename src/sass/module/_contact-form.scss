@@ -1,0 +1,241 @@
+@use "global" as *;
+
+$required-color: #c94800;
+
+.contact-form {
+    margin: 0 auto;
+    @include mq(md) {
+        max-width: rem(700);
+    }
+}
+
+.contact-form__error-message,
+.contact-form__agree-error {
+    display: none;
+    color: $required-color;
+    font-size: rem(14);
+    line-height: calc(17 / 14);
+    text-align: center;
+    scroll-margin-top: rem(80); /* ヘッダーの高さ分 */
+    @include mq(md) {
+        scroll-margin-top: rem(90); /* ヘッダーの高さ分 */
+    }
+ }
+/* エラー時に表示 */
+.contact-form__error-message.is-active {
+  display: block;
+}
+
+.contact-form__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(16);
+    padding: rem(24) 0;
+    border-bottom: 1px dashed $green-accent;
+    @include mq(md) {
+        gap: rem(20);
+        grid-template-columns: 1fr rem(480);
+    }
+}
+
+.contact-form__row--checkbox {
+    align-items: flex-start;
+}
+
+
+.contact-form__label {
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: 1.2;
+}
+
+.contact-form__required {
+    display: inline-block;
+    margin-left: rem(5);
+    padding: rem(4) rem(14);
+    font-size: rem(12);
+    line-height: calc(14 / 12);
+    letter-spacing: 0.4em;
+    font-weight: normal;
+    color: $white;
+    background-color: $required-color;
+}
+
+.contact-form__input,
+.contact-form__textarea {
+    width: 100%;
+    padding: rem(8) rem(16) rem(11);
+    border: 1px solid $green-accent;
+    font-size: rem(16);
+    line-height: 1.2;
+}
+
+.contact-form__textarea {
+    resize: vertical;
+    min-height: rem(200);
+}
+.contact-form__select {
+    width: 100%;
+    padding: rem(11) rem(8) rem(15);
+    border: 1px solid $green-accent;
+    font-size: rem(12);
+    line-height: calc(14 / 12);
+    @include mq(md) {
+        padding: rem(7) rem(16) rem(6);
+        line-height: calc(17 / 12);
+    }
+}
+
+::placeholder {
+    color: $green2;
+}
+
+.contact-form__checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+}
+
+.contact-form__checkbox {
+    font-size: rem(16);
+    line-height: calc(19 / 16);
+}
+input[type='checkbox'] {
+  position: absolute;
+}
+input[type='checkbox'] + .contact-form__checkbox {
+    // display: inline-block;
+    display: inline-flex;   // ← ここを変更
+    align-items: flex-start; // ← 上揃え
+    position: relative;
+    padding-left: rem(22);
+    vertical-align: middle;
+    text-align: left;
+}
+input[type='checkbox'] + .contact-form__checkbox--large {
+    padding-left: rem(30);
+    @include mq(md) {
+        padding-left: rem(38);
+    }
+}
+input[type='checkbox'] + .contact-form__checkbox::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    // top: 50%;
+    top: rem(2);
+    // transform: translateY(-50%);
+    display: block;
+    width: rem(14);
+    height: rem(14);
+    border: 1px solid $green-accent;
+}
+input[type='checkbox'] + .contact-form__checkbox--large::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    // top: 50%;
+    top: rem(2);
+    // transform: translateY(-50%);
+    width: rem(22);
+    height: rem(22);
+}
+
+input[type='checkbox']:checked + .contact-form__checkbox::after {
+    content: '';
+    position: absolute;
+    // top: 50%;
+    top: rem(6);
+    left: rem(2);
+    // transform: translateY(-60%) rotate(-45deg);
+    transform: rotate(-45deg);
+    border-left: 2px solid $required-color;
+    border-bottom: 2px solid $required-color;
+    height: rem(5);
+    width: rem(10);
+}
+
+input[type='checkbox']:checked + .contact-form__checkbox--large::after {
+    content: '';
+    position: absolute;
+    // top: 50%;
+    top: rem(6);
+    left: rem(4);
+    // transform: translateY(-60%) rotate(-45deg);
+    transform: rotate(-45deg);
+    border-left: 2px solid $required-color;
+    border-bottom: 2px solid $required-color;
+    height: rem(7);
+    width: rem(14);
+}
+.contact-form__select-wrapper {
+    width: 100%;
+    position: relative;
+}
+.contact-form__select-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: rem(8);
+    transform: translateY(-50%);
+    border-left: rem(6) solid transparent;
+    border-right: rem(6) solid transparent;
+    border-top: rem(10) solid $green-accent;
+    pointer-events: none;
+}
+
+.contact-form__agree {
+    margin-top: rem(40);
+    padding: 0 rem(31);
+    text-align: center;
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}
+.contact-form__checkbox--large {
+    font-size: rem(14);
+    line-height: calc(22 / 14);
+}
+
+.contact-form__submit {
+    margin-top: rem(24);
+    margin-bottom: rem(122);
+    margin-right: rem(3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mq(md) {
+        margin-top: rem(40);
+        margin-right: rem(4);
+        margin-bottom: rem(160);
+    }
+}
+
+.contact-form__submit-button {
+    padding: 16px 48px;
+    background-color: $green-accent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+/* 入力エラーの強調表示 */
+.contact-form__input.is-error {
+  border: 1px solid $required-color;
+  background-color: color-mix(in srgb, #C94800 20%, transparent);
+}
+.contact-form__textarea.is-error {
+  border: 1px solid $required-color;
+  background-color: color-mix(in srgb, #C94800 20%, transparent);
+}
+
+.contact-form__checkbox-group.is-error {
+  border: 1px solid $required-color;
+  background-color: color-mix(in srgb, #C94800 20%, transparent);
+}
+
+/* フォーカス時も赤枠を維持 */
+.is-error:focus {
+  outline: none;
+  border-color: $required-color;
+}

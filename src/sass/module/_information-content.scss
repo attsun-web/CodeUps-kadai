@@ -1,0 +1,85 @@
+@use "global" as *;
+
+
+.information-content {
+    position: relative;
+    width: 100%;
+    margin-top: rem(121);
+    @include mq(md) {
+        margin-top: rem(150);
+    }
+}
+.information-content::before {
+    content: "";
+    position: absolute;
+    top: rem(-93);
+    right: calc(100% - rem(120) - $padding-sp);
+    width: rem(120);
+    height: rem(55);
+    background-image: url("../images/common/bg-img-voice.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    @include mq(md) {
+        position: absolute;
+        top: rem(-70);
+        right: min(calc(50% + rem(319)), calc(100% - rem(301) - $padding-pc));
+        width: rem(301);
+        height: rem(138);
+    }
+}
+.information-content__inner {
+    padding-bottom: rem(26);
+    @include mq(md) {
+      padding-bottom: 0;
+    }
+}
+.information-content__image-block {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 297 / 189;
+  margin-top: rem(8);
+  @include mq(md) {
+    width: 50%;
+    aspect-ratio: 492 / 313;
+    margin-top: 0;
+  }
+}
+
+.information-content__image-block img {
+  position: absolute; /* 親要素内で絶対配置 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像がトリミングされても比率を保ち、はみ出た部分は切り取る */
+}
+
+.information-content__text-block {
+  width: 100%;
+  @include mq(md) {
+    width: 50%;
+  }
+}
+
+.information-content__title{
+  font-size: rem(24);
+  font-weight: $bold;
+  line-height: 1.2;
+  color: $green;
+  padding-bottom: rem(3);
+  border-bottom: rem(1) solid $green-accent;
+  @include mq(md) {
+    padding-bottom: rem(5);
+    line-height: 1;
+  }
+}
+
+.information-content__text {
+  width: 99%;
+  margin-top: rem(7);
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 1.5;
+  color: $green;
+}

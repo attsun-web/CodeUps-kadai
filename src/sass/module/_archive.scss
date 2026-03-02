@@ -1,0 +1,73 @@
+@use "global" as *;
+
+.archive__list {
+    margin-top: rem(24);
+}
+
+.archive__year + .archive__year {
+  margin-top: rem(16);
+}
+/* 共通 */
+.archive__year-btn,
+.archive__month-link {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: rem(24);
+  color: $green-accent;
+  padding-left: rem(4);
+}
+
+.archive__year-btn {
+  width: 100%;
+  text-align: left;
+}
+
+/* 月リスト */
+.archive__month-list {
+  margin-top: rem(10);
+  padding-left: rem(24);
+  display: none;
+}
+
+.archive__month-list li + li {
+  margin-top: 8px;
+}
+
+.archive__month-list a {
+  font-size: rem(24);
+  text-decoration: none;
+  color: $green-accent;
+}
+
+/* 開いた状態 */
+.archive__year.is-open .archive__month-list {
+  display: block;
+}
+
+/* ▶ 三角形（右向き） */
+.archive__icon {
+  // width: 0;
+  // height: 0;
+  // border-style: solid;
+  // border-width: 5px 0 5px 8px;
+  // border-color: transparent transparent transparent #333;
+  background-color: $green-accent;
+  width: calc(tan(60deg) * (rem(20) / 2));
+  height: rem(20);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  transition: transform 0.3s;
+}
+
+/* ▼ 年が開いた状態 */
+.archive__year.is-open .archive__year-btn .archive__icon {
+  transform: rotate(90deg);
+}
+
+/* 月は常に右向き（回転なし） */
+.archive__month-link .archive__icon {
+  transform: none;
+}

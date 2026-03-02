@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.main-view {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.main-view__image {
+    width: 100%;
+    aspect-ratio: 375 / 460;
+    object-fit: cover;
+    @include mq(md) {
+      aspect-ratio: 1440 / 548;
+      object-fit: cover;
+    }
+}
+.main-view__message {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    @include mq(md) {
+      margin-top: rem(50);
+    }
+}
+.main-view__message-title {
+    font-size: rem(40);
+    font-family: $third-font-family;
+    font-weight: 400;
+    line-height: 1.2;
+    color: $white;
+    @include mq(md) {
+      font-size: rem(80);
+      line-height: 1.25;
+    }
+}

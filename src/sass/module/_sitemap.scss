@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.sitemap {
+    position: relative;
+    width: 100%;
+    margin-top: rem(28);
+    @include mq(md) {
+        margin-top: rem(124);
+    }
+}
+.sitemap::before {
+    content: "";
+    position: absolute;
+    top: rem(-1);
+    right: calc(100% - rem(120) - $padding-sp);
+    width: rem(120);
+    height: rem(55);
+    background-image: url("../images/common/bg-img-voice.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    @include mq(md) {
+        position: absolute;
+        top: rem(-30);
+        right: min(calc(50% + rem(319)), calc(100% - rem(301) - $padding-pc));
+        width: rem(301);
+        height: rem(138);
+    }
+}
+.sitemap__inner {
+    padding-bottom: rem(26);
+    margin: 0 auto;
+    @include mq(md) {
+      padding-bottom: 0;
+    }
+}

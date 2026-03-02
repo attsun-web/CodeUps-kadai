@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.privacy-policy {
+    position: relative;
+    width: 100%;
+    margin-top: rem(52);
+    @include mq(md) {
+        margin-top: rem(150);
+    }
+}
+.privacy-policy::before {
+    content: "";
+    position: absolute;
+    top: rem(-1);
+    right: calc(100% - rem(120) - $padding-sp);
+    width: rem(120);
+    height: rem(55);
+    background-image: url("../images/common/bg-img-voice.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    @include mq(md) {
+        position: absolute;
+        top: rem(-70);
+        right: min(calc(50% + rem(319)), calc(100% - rem(301) - $padding-pc));
+        width: rem(301);
+        height: rem(138);
+    }
+}
+.privacy-policy__inner {
+    padding-bottom: rem(26);
+    margin: 0 auto;
+    @include mq(md) {
+        padding-bottom: 0;
+        max-width: rem(850);
+    }
+}
+.privacy-policy__title {
+    font-size: rem(24);
+    line-height: calc(29 / 24);
+    font-weight: 600;
+    margin-bottom: rem(46);
+    @include mq(md) {
+        font-size: rem(32);
+        line-height: calc(38 / 32);
+        margin-bottom: rem(48);
+    }
+}
+.privacy-policy__text,
+.privacy-policy__number-item,
+.privacy-policy__item {
+    font-size: rem(16);
+    line-height: 2;
+    @include mq(md) {
+    }
+}
+
+.privacy-policy__text,
+.privacy-policy__list {
+    margin-top: rem(32);
+    @include mq(md) {
+    }
+}
+.privacy-policy__text--first {
+    margin-top: 0;
+    margin-bottom: rem(32);
+    @include mq(md) {
+        margin-bottom: rem(32);
+    }
+}
+
+.privacy-policy__list {
+    list-style: disc;
+    padding-left: rem(16);
+    @include mq(md) {
+        padding-left: rem(16);
+    }
+}
+.privacy-policy__item::marker {
+    font-size: rem(10);
+}
+.privacy-policy__number-list {
+    list-style: decimal;
+    padding-left: rem(22);
+}

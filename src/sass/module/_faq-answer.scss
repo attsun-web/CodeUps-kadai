@@ -1,0 +1,23 @@
+@use "global" as *;
+
+/* 回答エリア */
+.faq-answer {
+  overflow: hidden;
+  display: none;
+  @include mq(md) {
+    margin-top: rem(16);
+  }
+}
+
+.faq-answer__inner {
+    padding: rem(24) rem(16);
+    background: $white;
+    border: 1px solid $green-accent;
+    font-size: rem(16);
+    line-height: 1.4;
+    @include mq(md) {
+      padding: rem(40);
+      line-height: 1.2;
+    }
+}
+

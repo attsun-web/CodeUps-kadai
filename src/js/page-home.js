@@ -101,100 +101,21 @@ var swiper = new Swiper(".js-campaign-swiper", {
 
   // スライダーが画面に入ったらオートプレイ開始
   const target = document.querySelector(".swiper");
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        swiper.autoplay.start();
-        observer.unobserve(target); // 1回だけ実行
-      }
-    });
-  }, { threshold: 0.3 }); // 30%見えたら開始
+  // target が null の場合に observe を呼ばないようにする
+  if (target instanceof Element) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          swiper.autoplay.start();
+          observer.unobserve(target); // 1回だけ実行
+        }
+      });
+    }, { threshold: 0.3 }); // 30%見えたら開始
 
-  observer.observe(target);
+    observer.observe(target);
+  }
 
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-  // MVスライダーの初期化
-  let currentPosition = 0;
-  const $slider = $('.js-slider');
-  const $wrapper = $('.js-slider-wrapper');
-
-  function toggleDrawer(forceClose = false) {
-    if ($('.js-hamburger').hasClass('is-active') || forceClose) {
-      $('.js-hamburger').removeClass("is-active");
-      $('.js-header').removeClass("sp-nav-active");
-      $(".js-sp-nav").removeClass("is-active");
-
-      $('body').removeClass("no-scroll");
-    } else {
-      $('.js-hamburger').addClass("is-active");
-      $('.js-header').addClass("sp-nav-active");
-      $(".js-sp-nav").addClass("is-active");
-      $('body').addClass("no-scroll");
-    }
-  }
-  // ハンバーガーメニューをクリックしたとき
-  $(".js-hamburger").click(function () {
-    toggleDrawer();
-  });
-  // ドロワーメニューのリンククリック時にドロワーを閉じる
-  $('.sp-nav__item a[href^="#"]').click(function () {
-    toggleDrawer(true);
-  });
-  // 幅が787px以上のときにドロワーが開いていればドロワーを閉じる
-  $(window).on('resize', function () {
-    if ($(window).width() >= 787) {
-      toggleDrawer(true);
-    }
-  });
-
-
-  const topBtn = $('.js-page-top');
-  topBtn.hide();
-
-  // ボタンの表示設定
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 70) {
-      // 指定px以上のスクロールでボタンを表示
-      topBtn.fadeIn();
-    } else {
-      // 画面が指定pxより上ならボタンを非表示
-      topBtn.fadeOut();
-    }
-  });
-
-  // 画面リサイズ時に位置リセット（オプション）
-  $(window).on('resize', function () {
-    currentPosition = 0;
-    $slider.css('transform', `translateX(0px)`);
-  })
-
-
-  // 画像出現アニメーション
-  // 要素の取得とスピードの設定
-  var box = $('.colorbox'),
-      speed = 700;
-
-  //.colorboxの付いた全ての要素に対して下記の処理を行う
-  box.each(function(){
-    $(this).append('<div class="color"></div>')
-    var color = $(this).find($('.color')),
-    image = $(this).find('img');
-    var counter = 0;
-
-    image.css('opacity','0');
-    color.css('width','0%');
-    //inviewを使って背景色が画面に現れたら処理をする
-    color.on('inview', function(){
-      if(counter == 0){
-        $(this).delay(200).animate({'width':'100%'},speed,function(){
-          image.css('opacity','1');
-          $(this).css({'left':'0' , 'right':'auto'});
-          $(this).animate({'width':'0%'},speed);
-        })
-        counter = 1;
-      }
-    });
-  });
 });

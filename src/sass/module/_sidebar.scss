@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.sidebar__widget {
+    width: rem(294);   // (294 / 345) * 100%  345 = 375 - 30(左右の余白)
+}
+.sidebar__widget + .sidebar__widget {
+    margin-top: rem(80);
+}
+.sidebar__title {
+    position: relative;
+    border-left: rem(8) solid $green-accent;
+    color: $green;
+    font-size: rem(24);
+    line-height: 1.2;
+    padding: rem(9) 0 rem(12) rem(74);
+}
+
+.sidebar__title::before {
+    position: absolute;
+    content: "";
+    width: rem(50);
+    height: rem(50);
+    top: 50%;
+    left: rem(16);
+    transform: translateY(-50%);
+    background-image: url("../images/common/title_icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.sidebar__list {
+    margin-top: rem(24);
+}
+.sidebar__item + .sidebar__item {
+    margin-top: rem(24);
+}
+.sidebar__widget .voice__btn {
+    margin-top: rem(40);
+}
+
+.sidebar__campaign + .sidebar__campaign {
+    margin-top: rem(40);
+}
+.sidebar__campaign .card .card__img img {
+    width: 100%;
+    aspect-ratio: 294 / 188;
+    // height: rem(180);
+    object-fit: cover;
+}
+.sidebar__campaign .card__body {
+    padding: rem(16) rem(23) rem(24);
+}
+
+.sidebar__campaign .card__text {
+    margin-top: rem(8);
+}
+
+.sidebar__campaign .card .card__title {
+    text-align: center;
+    margin-top: 0;
+}
+
+.sidebar__campaign .card__price-old {
+    font-size: rem(20);
+}
+
+.sidebar__campaign .card__price-new {
+    font-size: rem(32);
+}
+.sidebar__btn {
+    margin-top: rem(40);
+}
