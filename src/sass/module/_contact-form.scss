@@ -211,27 +211,19 @@ input[type='checkbox']:checked + .contact-form__checkbox--large::after {
     }
 }
 
-.contact-form__submit-button {
-    padding: 16px 48px;
-    background-color: $green-accent;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
 /* 入力エラーの強調表示 */
 .contact-form__input.is-error {
   border: 1px solid $required-color;
-  background-color: color-mix(in srgb, #C94800 20%, transparent);
+  background-color: color-mix(in srgb, $required-color 20%, transparent);
 }
 .contact-form__textarea.is-error {
   border: 1px solid $required-color;
-  background-color: color-mix(in srgb, #C94800 20%, transparent);
+  background-color: color-mix(in srgb, $required-color 20%, transparent);
 }
 
 .contact-form__checkbox-group.is-error {
   border: 1px solid $required-color;
-  background-color: color-mix(in srgb, #C94800 20%, transparent);
+  background-color: color-mix(in srgb, $required-color 20%, transparent);
 }
 
 /* フォーカス時も赤枠を維持 */

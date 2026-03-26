@@ -13,6 +13,8 @@
   background-color: $white;
   border: 1px solid $green-accent;
   transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+  margin-right: rem(4);
+  margin-bottom: rem(4);
 }
 // /* 外枠 */
 // .btn::before {
@@ -59,7 +61,6 @@
 .btn.btn--slide {            /* ホバー（スライド）前の状態 */
   background-color: $green-accent;
   color: $white;
-//   overflow: hidden;
   z-index: 1;
 }
 .btn.btn--slide::after {     /* ホバー（スライド）後の状態 */
@@ -87,16 +88,16 @@
 .btn.btn--slide:hover::after {
   transform: scale(1, 1);
 }
-// .btn__frame {
-//   position: absolute;
-//   top: rem(3);
-//   left: rem(3);
-//   width: rem(202);
-//   height: rem(54);
-//   border: 1px solid $green-accent;
-//   background-color: transparent;
-//   z-index: -2;
-// }
+.btn__frame {
+  position: absolute;
+  top: rem(3);
+  left: rem(3);
+  width: rem(202);
+  height: rem(54);
+  border: 1px solid $green-accent;
+  background-color: transparent;
+  z-index: -2;
+}
 /* 反転（文字・背景・線を入れ替え）ボタン */
 .btn.btn--invert {
   background-color: $white;

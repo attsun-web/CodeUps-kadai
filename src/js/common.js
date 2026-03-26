@@ -1,6 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-});
-
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
     // ハンバーガーメニューのトグル動作
